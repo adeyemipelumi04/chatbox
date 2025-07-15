@@ -83,4 +83,5 @@ class DefaultFirebaseOptions {
     authDomain: 'chatbox-e43ad.firebaseapp.com',
     storageBucket: 'chatbox-e43ad.firebasestorage.app',
   );
+
 }

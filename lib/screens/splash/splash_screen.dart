@@ -7,8 +7,20 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: SvgPicture.asset('asset/svgs/svg.svg', width: 200, height: 200),
+      body: FutureBuilder(
+        future: Future.delayed(const Duration(seconds: 3)),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+        // Navigate to sign up screen after 3 seconds
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          Navigator.of(context).pushReplacementNamed('/signup');
+        });
+          }
+          return Center(
+        child: SvgPicture.asset('assets/svgs/Logo.svg'),
+          );
+        },
+      
       ),
     );
   }
