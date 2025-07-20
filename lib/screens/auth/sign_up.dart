@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:chatbox_app/screens/auth/log_in.dart';
 import 'package:chatbox_app/utils/colors.dart';
 import 'package:chatbox_app/widgets/primary_button.dart';
