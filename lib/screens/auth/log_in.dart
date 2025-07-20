@@ -35,10 +35,6 @@ class _LoginScreenState extends State<LoginScreen> {
     final isValid = form.currentState!.validate();
     if (isValid) {
       form.currentState!.save();
-      final userCredential = await firebase.signInWithEmailAndPassword(
-        email: enteredEmail,
-        password: enteredPassword,
-      );
     }
     ScaffoldMessenger.of(context).clearSnackBars();
     ScaffoldMessenger.of(
